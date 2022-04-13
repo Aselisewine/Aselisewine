@@ -1,6 +1,6 @@
 \section*{A1. R code for data generation in Section 4}
-
 \begin{lstlisting}[language=R]
+
 mydata = function(n,alpha,beta1,beta2,beta3,beta4,beta5,beta6,beta7,beta8,beta9,
 beta10,cens,setting){
   z1 = rbern(n,prob = 0.5)  
@@ -72,9 +72,8 @@ beta10,cens,setting){
 
 \pagebreak
 
+
 \section*{A2. R code for DT-based EM algorithm in Section 4}
-
-
 \begin{lstlisting}[language=R]
 
 library(e1071)
@@ -104,8 +103,8 @@ survival <- exp(-HHazard)
 list(survival=survival)
 }
 
-# EM code
 
+# EM code
 em.dt.RC = function(Time,Status,X,Z,uncureprob,beta,s0,emmax,eps){
 
 w <- Status	
