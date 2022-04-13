@@ -1,5 +1,7 @@
-\section*{A1. R code for data generation in Section 4}
-\begin{lstlisting}[language=R]
+library(e1071)
+library(survival)
+library(rpart)
+
 
 mydata = function(n,alpha,beta1,beta2,beta3,beta4,beta5,beta6,beta7,beta8,beta9,
 beta10,cens,setting){
@@ -68,17 +70,6 @@ beta10,cens,setting){
   return(data.frame(Y,D,z1,z2,z3,z4,z5,z6,z7,z8,z9,z10,J,uncure=piz,S1,Sp=Sp))
 } 
 
-\end{lstlisting}
-
-\pagebreak
-
-
-\section*{A2. R code for DT-based EM algorithm in Section 4}
-\begin{lstlisting}[language=R]
-
-library(e1071)
-library(survival)
-library(rpart)
 
 smsurv <-function(Time,Status,X,beta,w,model){    
 
