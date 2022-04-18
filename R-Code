@@ -181,6 +181,7 @@ em.dt.RC <-function(Time,Status,X,Z,offsetvar,uncureprob,beta,emmax,eps,data) # 
   em.dt <- list(latencyfit=beta,Uncureprob=uncureprob,S0=s,S1=S1,Sp=Sp,tau=convergence, Mod1=mod1, Mod2=mod2, Mod3=mod3, Mod4=mod4, Mod5=mod5)
 }
 
+# Smcure code
 smcure.dt.RC <-function(formula,cureform,offset=NULL,data,na.action=na.omit,Var1=T,emmax=500,eps=1e-3,nboot=100)
 {
   call <- match.call()
